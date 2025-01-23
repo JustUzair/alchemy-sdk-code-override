@@ -82,6 +82,8 @@ const main = async () => {
     {
       to: dai,
       data: "0xa9059cbb0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f0000000000000000000000000000000000000000000000000de0b6b3a7640000", // The method signature and arguments for the call
+      // tracer: "prestateTracer"
+      
     },
     "latest",
     { ...stateDiff },
@@ -95,7 +97,7 @@ const main = async () => {
   // console.log("stateDiff:\n", JSON.stringify(stateDiff, null, 2));
   // console.log('====================================');
 
-  // console.log("callParams:\n", JSON.stringify(callParams, null, 2));
+  console.log("callParams:\n", JSON.stringify(callParams, null, 2));
   // console.log('====================================');
   const call2 = await provider.send("eth_call", callParams);
   // Log the results of both calls
